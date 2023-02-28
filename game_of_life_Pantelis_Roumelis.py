@@ -1,8 +1,12 @@
+#In this programm we creating the game of life 
+'''The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.
+It is a zero-player game, 
+meaning that its evolution is determined by its initial state, requiring no further input'''
+
 import pygame
 from pygame.locals import *
 import random
 import time
-
 def main():
 
 	exit = False
@@ -70,7 +74,7 @@ def CountNeighbours(cellSize, cells, width, height):
 					newCells.append((x,y))
 
 	return newCells
-
+#we are drawing the cells 
 def DrawCells(cellSize, cells, width, height):
 
 	
@@ -143,5 +147,6 @@ CLOCK = pygame.time.Clock()
 
 FIRST_GEN_CELLS = SeedGenerator(100, WINDOW_WIDTH, WINDOW_HEIGHT, BLOCK_SIZE)
 
+#this is the main function of the programm
 if __name__ == "__main__":
 	main()
